@@ -18,8 +18,7 @@ analyze:
 
 tests:
 	@rm -rf junit;\
-	# TODO run pytest use params below
-# --cov=src test/jobs/ --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
+	pipenv run pytest --cov=src test/jobs/ --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
 
 package:
 	@rm -rf build
@@ -31,7 +30,7 @@ bump_minor:
 	@pipenv run bump2version minor --allow-dirty --list
 
 bump_major:
-	@pipenv run bump2version minor --allow-dirty --list
+	@pipenv run bump2version major --allow-dirty --list
 
 version:
 	@cat setup.cfg | grep version | sed s,"^.*= *",,
