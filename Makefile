@@ -18,7 +18,7 @@ analyze:
 
 tests:
 	@rm -rf junit;\
-	pytest --cov=src test/jobs/ --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
+	pipenv run pytest --cov=src test/jobs/ --doctest-modules --junitxml=junit/test-results.xml --cov-report=xml --cov-report=html
 
 package:
 	@rm -rf build
