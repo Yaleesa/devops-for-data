@@ -101,7 +101,8 @@ jobs:
 
       - name: Push version & tag
         run: |
-          # TODO Push commit & tags
+          git push
+          git push --tags
 
       - name: Upload package
         uses: actions/upload-artifact@v2
