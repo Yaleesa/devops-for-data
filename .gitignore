@@ -137,3 +137,6 @@ dmypy.json
 
 # release
 /release.gzip
+
+# VSCode
+.vscode
